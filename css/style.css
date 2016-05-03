@@ -36,14 +36,21 @@ h1,h2,h3,h4,h5,h6,label,p{
 	display:block;
 	background-size:cover;
 }
+.logo h3{
+	text-decoration:none;
+	color:#fff;
+	font-size:2.5em;
+	font-family: 'Lobster Two', cursive;
+	text-align:center;
+}
 .logo h1{
-	font-size:3.5em;
+	font-size:5.5em;
 	font-family: 'Lobster Two', cursive;
 	text-align:center;
 }
 .logo h1 a{
 	text-decoration:none;
-	color:#fff;
+	color:#35A22C;
 }
 .logo {
 	padding-top: 3em;
@@ -80,7 +87,7 @@ h1,h2,h3,h4,h5,h6,label,p{
 	font-size:1.2em;
 }
 .header-top {
-	padding-top: 2em;
+	/*padding-top: 2em;*/
 }
 a.done{
 	text-decoration:none;
