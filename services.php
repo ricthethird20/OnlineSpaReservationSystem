@@ -1,34 +1,34 @@
 <div class="container">
 			<div class="specials">
-			<h2>Specials</h2>
+			<h2>Our Services</h2>
 				<div class="special-top">
 					<div class="col-md-3 special-in">
 						<a href="single.html" ><img src="images/pi2.jpg" class="img-responsive" alt="">
 						
 							</a>
 						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
-						<p>Plate Lunch</p>
+						<p>Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
 						<a href="single.html" ><img src="images/pi.jpg" class="img-responsive" alt="">
 						
 							</a>
 						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
-						<p>Coffee</p>
+						<p>Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
 						<a href="single.html" ><img src="images/pi1.jpg" class="img-responsive" alt="">
 						
 							</a>
 						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
-						<p>Chili Con Carne</p>
+						<p>Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
 						<a href="single.html" ><img src="images/pi4.jpg" class="img-responsive" alt="">
 						
 							</a>
 						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
-						<p>Cappuccino</p>
+						<p>Book now</p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -38,28 +38,28 @@
 						
 							</a>
 						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
-						<p>Coffee</p>
+						<p>Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
 						<a href="single.html" ><img src="images/pi7.jpg" class="img-responsive" alt="">
 						
 							</a>
 						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
-						<p>Egg</p>
+						<p>Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
 						<a href="single.html" ><img src="images/pi6.jpg" class="img-responsive" alt="">
 						
 							</a>
 						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
-						<p>Food</p>
+						<p>Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
 						<a href="single.html" ><img src="images/pi5.jpg" class="img-responsive" alt="">
 						
 							</a>
 						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
-						<p>Tom Kha Gai</p>
+						<p>Book now</p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>

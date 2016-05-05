@@ -662,8 +662,12 @@ a.more{
 	color:#2e8e26;
 }
 .special-in p{
+	cursor: pointer;
+	text-align: center;
+	border-radius: 3px;
+	background-color:#35A22C;
 	font-size:1.3em;
-	color:#3e3e3e;
+	color:#FCFCFC;
 }
 .special-top {
 	padding: 1em 0;
