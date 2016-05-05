@@ -5,12 +5,19 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
+<?php
+
+if (empty($_GET['pg']))
+	$page = 'home';
+else
+	$page = $_GET['pg'];
+
+?>
 <html>
 <head>
-<title>Food shop A Hotel Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
-
-
-
+<html>
+<head>
+<title>Pasithea Massage Therapy Center</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -36,89 +43,86 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 						});
 					});
-					</script>
+				</script>
+				
+<script src="js/responsiveslides.min.js"></script>
+<style>
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
 
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
 
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.rslides img {
+  display: block;
+  min-height: 400px;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+</style>
+<script>
+ $(function () {
+	$(".rslides").responsiveSlides({
+	  auto: true,             // Boolean: Animate automatically, true or false
+	  speed: 500,            // Integer: Speed of the transition, in milliseconds
+	  timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+	  pager: false,           // Boolean: Show pager, true or false
+	  nav: false,             // Boolean: Show navigation, true or false
+	  random: false,          // Boolean: Randomize the order of the slides, true or false
+	  pause: false,           // Boolean: Pause on hover, true or false
+	  pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+	  prevText: "Previous",   // String: Text for the "previous" button
+	  nextText: "Next",       // String: Text for the "next" button
+	  maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
+	  navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+	  manualControls: "",     // Selector: Declare custom pager navigation
+	  namespace: "rslides",   // String: Change the default namespace used
+	  before: function(){},   // Function: Before callback
+	  after: function(){}     // Function: After callback
+	});
+});
+</script>
 
 </head>
 <body>
 	<!--header-->
-	<div class="header-in">
+	<div class="header">
 		<div class="container">
 			<div class="logo">
-				<h1><a href="index.html">Food Shop</a></h1>
-
+				<h1><a href="index.html">Pasithea</a></h1>
+				<h3>Massage Therapy Center</h3>
 			</div>
 			<div class="header-top">
 				<div class="header-top-in">
 					<ul class="header-grid">
-						<li ><a href="account.html">My Account   </a> <label>/</label></li>
+						<li  ><a href="account.html">My Account   </a> <label>/</label></li>
 						<li ><a href="login.html">  Login </a> </li>		
 					</ul>
-					<div class="act">
-						<a href="#" class="done">Donec actortor </a>
-					</div>
-				<div class="clearfix"> </div>
 				</div>
 				<ul class="grid-header">
 					<li><a href="account.html">My Account</a> <label>/</label></li>
 					<li><a href="#">My Cart</a> <label>/</label></li>
 					<li><a href="checkout.html">  Checkout </a> </li>		
-				</ul>
+				</ul> 
 				<div class="clearfix"> </div>
 			</div>
 			<!---->
@@ -126,11 +130,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="top-nav">
 					<span class="menu"> </span>
 					<ul>
-						<li  ><a href="index.html" >Home  </a><label>- </label> </li>
-						<li><a href="location.html" > Locations</a><label>- </label></li>
-						<li><a href="specials.html">Specials </a><label>- </label></li>
-						<li><a href="404.html" > Order Online</a><label>- </label></li>
-						<li class="active"><a href="contact.html">Contacts</a></li>
+						<li class="active" ><a href="index.php">Home  </a><label>- </label> </li>
+						<li><a href="index.php?pg=abt">About</a><label>- </label></li>
+						<li><a href="index.php?pg=svc">Services </a><label>- </label></li>						
+						<li><a href="index.php?pg=ctc">Contacts</a><label>- </label></li>
+						<li><a href="index.php?pg=faq">FAQ's</a></li>
 					</ul>
 					<!--script-->
 				<script>
@@ -140,104 +144,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					});
 			</script>
 				</div>
-
-					<div class="search">
-						<form>
-							<input type="text" value="Search store here ..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" >
-							<input type="submit" value="">
-						</form>
-					</div>
-
 			<div class="clearfix"> </div>
 		</div>
 		<!---->
+	<?php
+		if($page == 'home')
+			include_once('banner.php');
+	?>
+		</div>
 	</div>
-	</div>
-	<!---->
-	<div class="container">
-				<div class="contact">
-				<div class="contact-in">
-				<h2>contact</h2>
-				<div class=" col-md-9 contact-left">
-				  
-					    <form >
-					    	<div>
-						    	<span>Name</span>
-						    	<input name="userName" type="text" class="textbox">
-						    </div>
-						    <div>
-						    	<span>E-Mail</span>
-						    	<input name="userEmail" type="text" class="textbox">
-						    </div>
-						    <div>
-						    	<span>Subject</span>
-						    	<textarea name="userMsg"> </textarea>
-						    </div>
-						   <div>
-						   		<span><input type="submit" value="Submit"></span>
-						  </div>
-					    </form>
-				  </div>
-
-				<div class=" col-md-3 contact-right">
-				     	<h5>Company Information</h5>
-						    	<p>500 Lorem Ipsum Dolor Sit,</p>
-						   		<p>22-56-2-9 Sit Amet, Lorem,</p>
-						   		<p>USA</p>
-				   		<p>Phone:(00) 222 666 444</p>
-				   		<p>Fax: (000) 000 00 00 0</p>
-				 	 	<p>Email: <a href="mailto:info@mycompany.com">info@mycompany.com</a></p>
-				   		<p>Follow on: <a href="#">Facebook</a>, <a href="#">Twitter</a></p>
-				    </div>
-					  <div class="clearfix"></div>
-				 </div>
-				
-			     <div class="map">
-				 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d505145.6949089349!2d115.07157704999999!3d-8.455471450000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd22f7520fca7d3%3A0x2872b62cc456cd84!2sBali%2C+Indonesia!5e0!3m2!1sen!2sin!4v1418170815897"></iframe>
-				</div>
-      		</div>
-	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<!--Contents here-->
+	<?php
+		require_once('contents.php');
+	?>
 	<!---->
 	<div class="footer">
 		<div class="container">

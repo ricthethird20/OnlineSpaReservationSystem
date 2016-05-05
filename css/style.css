@@ -25,7 +25,7 @@ h1,h2,h3,h4,h5,h6,label,p{
 .header{
 	background:url(../images/back.jpg) no-repeat center;
 	width:100%;
-	min-height:798px;
+	position: relative;
 	display:block;
 	background-size:cover;
 }
