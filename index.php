@@ -112,7 +112,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header">
 		<div class="container">
 			<div class="logo">
-				<h1><a href="index.html">Pasithea</a></h1>
+				<h1><a href="index.php">Pasithea</a></h1>
 				<h3>Massage Therapy Center</h3>
 			</div>
 			<div class="header-top">
@@ -122,11 +122,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li ><a class="cd-signin" href="#">Login </a> </li>		
 					</ul>
 				</div>
-				<ul class="grid-header">
+				<!--<ul class="grid-header">
 					<li><a href="account.html">My Account</a> <label>/</label></li>
 					<li><a href="#">My Cart</a> <label>/</label></li>
 					<li><a href="checkout.html">  Checkout </a> </li>		
-				</ul> 
+				</ul> -->
 				<div class="clearfix"> </div>
 			</div>
 			<!---->
@@ -157,137 +157,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	?>
 		</div>
 	</div>
-	
-	<!-- Modal here -->
-	<script src="js/main.js"></script>
-	<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
-		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
-			<ul class="cd-switcher">
-				<li><a href="#0">Sign in</a></li>
-				<li><a href="#0">New account</a></li>
-			</ul>
-
-			<div id="cd-login"> <!-- log in form -->
-				<form class="cd-form">
-					<p class="fieldset">
-						<label class="image-replace cd-email" for="signin-email">E-mail</label>
-						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
-						<span class="cd-error-message">Error message here!</span>
-					</p>
-
-					<p class="fieldset">
-						<label class="image-replace cd-password" for="signin-password">Password</label>
-						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
-						<a href="#0" class="hide-password">Hide</a>
-						<span class="cd-error-message">Error message here!</span>
-					</p>
-
-					<p class="fieldset">
-						<input type="checkbox" id="remember-me" checked>
-						<label for="remember-me">Remember me</label>
-					</p>
-
-					<p class="fieldset">
-						<input class="full-width" type="submit" value="Login">
-					</p>
-				</form>
-				
-				<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
-				<!-- <a href="#0" class="cd-close-form">Close</a> -->
-			</div> <!-- cd-login -->
-
-			<div id="cd-signup"> <!-- sign up form -->
-				<form class="cd-form">
-					<p class="fieldset">
-						<label class="image-replace cd-username" for="signup-username">Username</label>
-						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
-						<span class="cd-error-message">Error message here!</span>
-					</p>
-
-					<p class="fieldset">
-						<label class="image-replace cd-email" for="signup-email">E-mail</label>
-						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
-						<span class="cd-error-message">Error message here!</span>
-					</p>
-
-					<p class="fieldset">
-						<label class="image-replace cd-password" for="signup-password">Password</label>
-						<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Password">
-						<a href="#0" class="hide-password">Hide</a>
-						<span class="cd-error-message">Error message here!</span>
-					</p>
-
-					<p class="fieldset">
-						<input type="checkbox" id="accept-terms">
-						<label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
-					</p>
-
-					<p class="fieldset">
-						<input class="full-width has-padding" type="submit" value="Create account">
-					</p>
-				</form>
-
-				<!-- <a href="#0" class="cd-close-form">Close</a> -->
-			</div> <!-- cd-signup -->
-
-			<div id="cd-reset-password"> <!-- reset password form -->
-				<p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
-
-				<form class="cd-form" method="post">
-					<p class="fieldset">
-						<label class="image-replace cd-email" for="reset-email">E-mail</label>
-						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
-						<span class="cd-error-message">Error message here!</span>
-					</p>
-
-					<p class="fieldset">
-						<input class="full-width has-padding" name="reset_password" type="submit" value="Reset password">
-					</p>
-				</form>
-
-				<p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
-			</div> <!-- cd-reset-password -->
-			<a href="#0" class="cd-close-form">Close</a>
-		</div> <!-- cd-user-modal-container -->
-	</div> <!-- cd-user-modal -->
-	
+	<!--contents here-->
 	<?php
-	
-		if(isset($_POST['reset_password'])){
-			 $to = "ricardoferrancullo@yahoo.com";
-			 $subject = "This is subject";
-			 
-			 $message = "<b>This is HTML message.</b>";
-			 
-			 $header = "From:ricferrancullo.rf@gmail.com";
-			 
-			 $retval = mail ($to,$subject,$message,$header);
-			 
-			 if( $retval == true ) {
-				echo "<script>alert('Message sent')</script>";
-			 }else {
-				echo "<script>alert('Message not sent')</script>";
-			 }
-		}
-	
-	?>
-	
-	<!--Contents here-->
-	<?php
-		require_once('contents.php');
+		require_once('login_form.php');
+		require_once('contents.php');  
 	?>
 	<!---->
 	<div class="footer">
 		<div class="container">
 		<div class="col-md-8 footer-bottom ">
-		<h4>Aenean condimentum suscipit dolor</h4>
-		<p>Proin ullamcorper urna quis velit mollis molestie suscipit nisl consectetur
-uspendisse venenatis dolor et nunc iaculis ege</p>
-		<p class="footer-grid">Copyright &copy; 2015 Food shop Template by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+		<h4>Refresh. Relax. Wellness awaits you...</h4>
+		<!--<div class="footer-nav">
+			<ul>
+				<li class="active" ><a href="index.php">Home  </a><label>- </label> </li>
+				<li><a href="index.php?pg=abt">About</a><label>- </label></li>
+				<li><a href="index.php?pg=svc">Services </a><label>- </label></li>						
+				<li><a href="index.php?pg=ctc">Contacts</a><label>- </label></li>
+				<li><a href="index.php?pg=faq">FAQ's</a></li>
+			</ul>
+		</div>-->
+		<p class="footer-grid">Copyright &copy; 2016 <a href="index.php">Pasithea Spa Center</a> </p>
 
 		</div>
 			<div class="col-md-4 footer-bottom ">
-				<h4>Muscipit dolor</h4>
+				<h4>Follow us!</h4>
 				<ul class="social-icons">
 					<li><a href="#"><span> </span> </a></li>
 					<li class="tin"><a href="#"><span> </span></a></li>

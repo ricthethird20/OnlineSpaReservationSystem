@@ -616,7 +616,7 @@ a.more{
 	padding-bottom: 0.5em;
 }
 .bottom-special{
-	background:url(../images/s1.jpg) no-repeat center;
+	background:url(../images/laser_removal.jpg) no-repeat center;
 	display:block;
 	padding: 6em 2em;
 	text-align:center;
@@ -625,7 +625,7 @@ a.more{
 	background-size: cover;
 }
 .bottom-special-1{
-	background:url(../images/s2.jpg) no-repeat center;
+	background:url(../images/kingandqueen.jpg) no-repeat center;
 	display:block;
 	padding:6em 2em;
 	text-align:center;
@@ -866,11 +866,11 @@ span.price {
 /*--404--*/
 .four{
 	text-align:center;
-	padding: 8em 0 10em;
+	padding:4em 0 10em;
 	min-height: 521px;
 }
 .four h2{
-	font-size: 5em;
+	font-size: 4em;
 	color: #aa381e;
 	font-family: 'Lobster Two', cursive;
 }
@@ -1088,7 +1088,8 @@ a.forgot {
 .footer{
 	background:url(../images/footer.png) no-repeat center;
 	width:100%;
-	min-height:250px;
+	position:relative;
+	min-height:150px;
 	display:block;
 	background-size:cover;
 	padding-top:3em;
@@ -1096,6 +1097,15 @@ a.forgot {
 .footer h4{
 	font-size:2em;
 	font-family: 'Lobster Two', cursive;
+	color:#fff;
+}
+.footer-nav{
+	font-size:1.4em;
+	color:#440f0a;
+	padding-top: 1em;
+	text-decoration: underline;
+}
+.footer-nav:hover{
 	color:#fff;
 }
 .footer-bottom p{

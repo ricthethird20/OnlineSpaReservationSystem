@@ -316,6 +316,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.img-responsive{
+	width:268px;
+	height:179px;
+}
 .img-rounded {
   border-radius: 6px;
 }

@@ -3,76 +3,74 @@
 			<h2>Our Services</h2>
 				<div class="special-top">
 					<div class="col-md-3 special-in">
-						<a href="single.html" ><img src="images/pi2.jpg" class="img-responsive" alt="">
+						<a href="#" ><img src="images/eyelash_extension.jpg" class="img-responsive" alt="">
 						
 							</a>
-						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
+						<h5><a href="#">Eyelash Extension</a></h5>
 						<p>Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
-						<a href="single.html" ><img src="images/pi.jpg" class="img-responsive" alt="">
+						<a href="#" ><img src="images/foot_massage.jpg" class="img-responsive" alt="">
 						
 							</a>
-						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
+						<h5><a href="#">Foot Massage</a></h5>
 						<p>Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
-						<a href="single.html" ><img src="images/pi1.jpg" class="img-responsive" alt="">
+						<a href="#" ><img src="images/foot_spa.jpg" class="img-responsive" alt="">
 						
 							</a>
-						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
+						<h5><a href="#">Foot Spa</a></h5>
 						<p>Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
-						<a href="single.html" ><img src="images/pi4.jpg" class="img-responsive" alt="">
+						<a href="#" ><img src="images/manicure.jpg" class="img-responsive" alt="">
 						
 							</a>
-						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
+						<h5><a href="#">Manicure</a></h5>
 						<p>Book now</p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
 			<div class="special-top">
 					<div class="col-md-3 special-in">
-						<a href="single.html" ><img src="images/pi3.jpg" class="img-responsive" alt="">
+						<a href="#" ><img src="images/pi3.jpg" class="img-responsive" alt="">
 						
 							</a>
-						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
+						<h5><a href="#">Pedicure</a></h5>
 						<p>Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
-						<a href="single.html" ><img src="images/pi7.jpg" class="img-responsive" alt="">
+						<a href="#" ><img src="images/swedish_massage.jpg" class="img-responsive" alt="">
 						
 							</a>
-						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
+						<h5><a href="#">Swedish Massage</a></h5>
 						<p>Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
-						<a href="single.html" ><img src="images/pi6.jpg" class="img-responsive" alt="">
+						<a href="#" ><img src="images/breeze_massage.jpg" class="img-responsive" alt="">
 						
 							</a>
-						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
+						<h5><a href="#">Breeze Massage</a></h5>
 						<p>Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
-						<a href="single.html" ><img src="images/pi5.jpg" class="img-responsive" alt="">
+						<a href="#" ><img src="images/thai_massage.jpg" class="img-responsive" alt="">
 						
 							</a>
-						<h5><a href="single.html">Vivamus vel eros nulla</a></h5>
+						<h5><a href="#">Thai Massage</a></h5>
 						<p>Book now</p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
 				<div class="special-bottom">
 					<div class="col-md-6 bottom-special">						
-						<h5><a href="single.html">ALIQUAM CONGUE FERMENTU</a></h5>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
-						<a href="single.html" class="details">Details</a>
+						<h5><a href="#" style="color:#aa381e;">HAIR REMOVAL</a></h5>
+						<a href="#" class="details">Book now</a>
 					</div>
 					<div class="col-md-6 bottom-special-1">
-						<h5><a href="single.html">ALIQUAM CONGUE FERMENTU</a></h5>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
-						<a href="single.html" class="details">Details</a>
+						<h5><a href="#" style="color:#aa381e;padding-bottom:10px;">KING AND QUEEN MASSAGE</a></h5>
+						<a href="#" class="details" style="padding-top:10px;">Book now</a>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
