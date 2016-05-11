@@ -481,7 +481,7 @@ a.details:hover{
 }
 p.para-in{
 	font-size:1.2em;
-	color:#919191;
+	color:#3e3e3e;
 }
 .egg{
 	border-radius: 14px;
@@ -525,7 +525,7 @@ p.sed{
 	color:#919191;
 }
 p.sed span{
-	border-bottom:1px solid #919191;
+	color:#3e3e3e;
 }
 .amet-grid {
 	padding: 0.8em 0;

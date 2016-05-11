@@ -122,12 +122,15 @@
 						</div>
 						<div class="amet-grid">
 							<div class="now"><span>Feb 14</span><center>2016</center></div>
-							<p class="sed"><span>Lorem ipsum dolor sit amet </span> <span>consecteturLorem ipsum dolor sit</span> <span>amet, consectetur adipisicing</span></p>
+							<p class="sed"><span>Congratulations Graduates! Its time for you to relax, avail your FREE Pasithea 
+							Signature Massage daily from 12noon to 11pm (last call), just bring two of your friends and have yours 
+							for FREE..call or text us at 09325192234.</span></p>
 						<div class="clearfix"> </div>
 						</div>
 						<div class="amet-grid">
 							<div class="now"><span>Dec 26</span><center>2015</center></div>
-							<p class="sed"><span>Lorem ipsum dolor sit amet </span> <span>consecteturLorem ipsum dolor sit</span> <span>amet, consectetur adipisicing</span></p>
+							<p class="sed"><span>Due to insistent public demand.. BUY ONE TAKE ONE FOR PASITHEA SIGNATURE MASSAGE 
+							will be EXTENDED..avail same quality and relaxing service from 12 nn to 5pm daily. Book now!</span></p>
 						<div class="clearfix"> </div>
 						</div>
 					</div>
