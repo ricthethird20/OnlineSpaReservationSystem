@@ -7,59 +7,59 @@
 						
 							</a>
 						<h5><a href="#">Eyelash Extension</a></h5>
-						<p>Book now</p>
+						<p onclick="javascript:window.location='index.php?pg=book&svcId=1'">Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
 						<a href="#" ><img src="images/foot_massage.jpg" class="img-responsive" alt="">
 						
 							</a>
 						<h5><a href="#">Foot Massage</a></h5>
-						<p>Book now</p>
+						<p onclick="javascript:window.location='index.php?pg=book&svcId=1'">Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
 						<a href="#" ><img src="images/foot_spa.jpg" class="img-responsive" alt="">
 						
 							</a>
 						<h5><a href="#">Foot Spa</a></h5>
-						<p>Book now</p>
+						<p onclick="javascript:window.location='index.php?pg=book&svcId=1'">Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
 						<a href="#" ><img src="images/manicure.jpg" class="img-responsive" alt="">
 						
 							</a>
 						<h5><a href="#">Manicure</a></h5>
-						<p>Book now</p>
+						<p onclick="javascript:window.location='index.php?pg=book&svcId=1'">Book now</p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
 			<div class="special-top">
 					<div class="col-md-3 special-in">
-						<a href="#" ><img src="images/pi3.jpg" class="img-responsive" alt="">
+						<a href="#" ><img src="images/manicure.jpg" class="img-responsive" alt="">
 						
 							</a>
 						<h5><a href="#">Pedicure</a></h5>
-						<p>Book now</p>
+						<p onclick="javascript:window.location='index.php?pg=book&svcId=1'">Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
 						<a href="#" ><img src="images/swedish_massage.jpg" class="img-responsive" alt="">
 						
 							</a>
 						<h5><a href="#">Swedish Massage</a></h5>
-						<p>Book now</p>
+						<p onclick="javascript:window.location='index.php?pg=book&svcId=1'">Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
 						<a href="#" ><img src="images/breeze_massage.jpg" class="img-responsive" alt="">
 						
 							</a>
 						<h5><a href="#">Breeze Massage</a></h5>
-						<p>Book now</p>
+						<p onclick="javascript:window.location='index.php?pg=book&svcId=1'">Book now</p>
 					</div>
 					<div class="col-md-3 special-in">
 						<a href="#" ><img src="images/thai_massage.jpg" class="img-responsive" alt="">
 						
 							</a>
 						<h5><a href="#">Thai Massage</a></h5>
-						<p>Book now</p>
+						<p onclick="javascript:window.location='index.php?pg=book&svcId=1'">Book now</p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>

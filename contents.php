@@ -12,5 +12,9 @@
 		case 'ctc':
 			include_once('contact.php');
 			break;
+		case 'book':
+			$svc_id = $_GET['svcId'];
+			include_once('book.php');		
+			break;
 	}
 ?>
