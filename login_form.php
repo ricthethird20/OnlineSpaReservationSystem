@@ -7,16 +7,16 @@
 			</ul>
 
 			<div id="cd-login"> <!-- log in form -->
-				<form class="cd-form">
+				<form class="cd-form" method="post" action="login_redirect.php">
 					<p class="fieldset">
-						<label class="image-replace cd-email" for="signin-email">E-mail</label>
-						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+						<label class="image-replace cd-username" for="signin-email">Username</label>
+						<input class="full-width has-padding has-border" id="signin-username" name="signin-username" type="text" placeholder="Username">
 						<span class="cd-error-message">Error message here!</span>
 					</p>
 
 					<p class="fieldset">
 						<label class="image-replace cd-password" for="signin-password">Password</label>
-						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
+						<input class="full-width has-padding has-border" id="signin-password" name="signin-password" type="password"  placeholder="Password">
 						<a href="#0" class="hide-password">Hide</a>
 						<span class="cd-error-message">Error message here!</span>
 					</p>
@@ -36,22 +36,31 @@
 			</div> <!-- cd-login -->
 
 			<div id="cd-signup"> <!-- sign up form -->
-				<form class="cd-form">
-					<p class="fieldset">
-						<label class="image-replace cd-username" for="signup-username">Username</label>
-						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+				<form class="cd-form" method="post" action="register_redirect.php">
+					<p class="fieldset">					
+						<input class="full-width has-padding-side has-border" id="signup-lastname" name="signup-lastname" type="text" placeholder="Last name">
 						<span class="cd-error-message">Error message here!</span>
 					</p>
-
+					
 					<p class="fieldset">
-						<label class="image-replace cd-email" for="signup-email">E-mail</label>
-						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+						<input class="full-width has-padding-side has-border" id="signup-firstname" name="signup-firstname" type="text" placeholder="First name">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+					
+					<p class="fieldset">
+						<input class="full-width has-padding-side has-border" id="signup-contact" name="signup-contact" type="text" placeholder="Mobile">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+				
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">Username</label>
+						<input class="full-width has-padding has-border" id="signup-username" name="signup-username" type="text" placeholder="Username">
 						<span class="cd-error-message">Error message here!</span>
 					</p>
 
 					<p class="fieldset">
 						<label class="image-replace cd-password" for="signup-password">Password</label>
-						<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Password">
+						<input class="full-width has-padding has-border" id="signup-password" type="text" name="signup-password" placeholder="Password">
 						<a href="#0" class="hide-password">Hide</a>
 						<span class="cd-error-message">Error message here!</span>
 					</p>

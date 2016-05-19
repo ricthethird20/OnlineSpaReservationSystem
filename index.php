@@ -97,6 +97,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body>
+	<?php
+	session_start();
+	include_once("includes/useraccount_api.php");
+	?>
 	<!--header-->
 	<div class="header">
 		<div class="container">
@@ -107,15 +111,41 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header-top">
 				<div class="header-top-in">
 					<ul class="header-grid">
-						<li ><a class="cd-signup" href="#">Sign up</a> <label> | </label></li>
-						<li ><a class="cd-signin" href="#">Login </a> </li>		
+						<?php
+							if(!isset($_SESSION['userid']))
+							{							
+						?>
+							<li><a style="color:white;" class="cd-signup" href="#">Sign up</a> <label> | </label></li>
+							<li><a style="color:white;" class="cd-signin" href="#">Login </a> </li>	
+						<?php
+							}
+						?>
 					</ul>
 				</div>
-				<!--<ul class="grid-header">
-					<li><a href="account.html">My Account</a> <label>/</label></li>
-					<li><a href="#">My Cart</a> <label>/</label></li>
-					<li><a href="checkout.html">  Checkout </a> </li>		
-				</ul> -->
+				<?php
+					if(isset($_SESSION['userid'])){	
+						//$userId = $_SESSION['userId'];
+						if(getUserDetails($_SESSION['userid'])){
+							$res = getUserDetails($_SESSION['userid']);
+							foreach($res as $row){
+								$client_name = $row->FirstName." ".$row->Lastname;
+							}
+						}
+				?>				
+					<ul class="grid-header" style="margin-bottom: -20px;">
+						<li class="dropdown">
+							<span style="color: white;font-size: 16px;">Hello, </span>
+							<a href="#" class="dropbtn"><?php echo $client_name; ?></a>
+								<div class="dropdown-content">
+								  <a href="#">Bookings</a>
+								  <a href="#">Account settings</a>
+								  <a href="logout.php">Sign out</a>
+							</div>
+						</li>
+					</ul>
+				<?php
+					}
+				?>
 				<div class="clearfix"> </div>
 			</div>
 			<!---->

@@ -258,6 +258,9 @@ xsigin/signup popup
   .cd-form input.has-padding {
     padding: 16px 20px 16px 50px;
   }
+  .cd-form input.has-padding-side {
+    padding: 16px 20px 16px 16px;
+  }
   .cd-form input[type=submit] {
     padding: 16px 0;
   }
