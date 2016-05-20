@@ -1,4 +1,12 @@
-﻿<head>
+﻿<?php
+
+if(empty($_GET['page']))
+	$page = 'home';
+else
+	$page = $_GET['page'];
+
+?>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pasithea Dashboard</title>
@@ -39,65 +47,68 @@
                 <!-- /.dropdown -->
             </ul>
         </nav>
-        <!--/. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                     <li>
-                        <a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a href="index.php"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="ui-elements.html"><i class="fa fa-desktop"></i> Bookings</a>
+                        <a href="index.php?page=bookings"><i class="fa fa-desktop"></i> Bookings</a>
                     </li>
 					<li>
-                        <a href="table.html"><i class="fa fa-table"></i> Messages</a>
+                        <a href="index.php?page=msgs"><i class="fa fa-table"></i> Messages</a>
                     </li>
 					<li>
-                        <a href="chart.html"><i class="fa fa-bar-chart-o"></i> Services</a>
+                        <a href="index.php?page=svcs"><i class="fa fa-bar-chart-o"></i> Services</a>
                     </li>
                     <li>
-                        <a href="tab-panel.html"><i class="fa fa-qrcode"></i> Client Details</a>
+                        <a href="index.php?page=clients"><i class="fa fa-qrcode"></i> Client Details</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-sitemap"></i> Web Contents<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level" >
                             <li>
-                                <a href="#">Announcements and Article</a>
+                                <a href="index.php?page=articles">Announcements and Article</a>
                             </li>
                             <li>
-                                <a href="#">About and Contact details</a>
+                                <a href="index.php?page=about">About and Contact details</a>
                             </li>
 							<li>
-                                <a href="#">Testimonials and Gallery</a>
+                                <a href="index.php?page=tg">Testimonials and Gallery</a>
                             </li>
 							<li>
-                                <a href="#">FAQ's</a>
+                                <a href="index.php?page=faq">FAQ's</a>
                             </li>
 						</ul>
 					</li>
 					<li>
-                        <a href="chart.html"><i class="fa fa-bar-chart-o"></i> Users</a>
+                        <a href="index.php?page=users"><i class="fa fa-bar-chart-o"></i> Users</a>
                     </li>
 
             </div>
 
         </nav>
-        <!-- /. NAV SIDE  -->
+			
 			<div id="page-wrapper" >
-				<div id="page-inner">
-					<div class="row">
-						<div class="col-md-12">
-							<h1 class="page-header">
-								Empty Page <small>Create new page.</small>
-							</h1>
-						</div>
-					</div> 
-					 <!-- /. ROW  -->
-					 <footer><p>All right reserved. Pasithea 2016</p></footer>
-				</div>
-				 <!-- /. PAGE INNER  -->
+				<?php
+					switch($page){
+						case 'articles':	
+							include_once('articles-announcements.php');
+							break;
+						
+						case 'about':
+						break;
+						
+						case 'tg':
+						break;
+						
+						case 'faq':
+						break;
+					}
+				?>
             </div>
-         <!-- /. PAGE WRAPPER  -->
+
         </div>
 
     <script src="assets/js/jquery-1.10.2.js"></script>
