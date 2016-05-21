@@ -1,9 +1,7 @@
 <?php
-include_once('database.php');
-
+require_once('database.php');
 $db = new Database();
 $db = $db->connect();
-global $userId;
 
 //GET
 function isUserExist($username,$pwd){

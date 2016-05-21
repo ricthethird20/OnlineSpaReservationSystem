@@ -14,6 +14,7 @@ else
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
     <link href="assets/css/custom-styles.css" rel="stylesheet" />
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   <script src="assets/js/jquery.min.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -93,12 +94,17 @@ else
 			<div id="page-wrapper" >
 				<?php
 					switch($page){
+						case 'svcs':
+							include_once('services.php');
+							break;
+						
 						case 'articles':	
 							include_once('articles-announcements.php');
 							break;
 						
 						case 'about':
-						break;
+							include_once('about-contact.php');
+							break;
 						
 						case 'tg':
 						break;
