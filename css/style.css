@@ -722,14 +722,12 @@ a.more{
 	padding: 1em 0;
 }
 .special-in {
-	margin: 0 2% 0 0;
-	padding: 0;
-	width: 23.5%;
+	
+	padding: 6px;
+	width: 25%;
 	float:left;
 }
-.special-in:nth-child(4) {
-	margin:0;
-}
+
 /*--single--*/
 .single-men h5{
 	font-size:1.5em;
@@ -843,7 +841,7 @@ ul.comment-list img {
 	background: #aa381e;	
 }
 .single {
-	padding: 5em 0;
+	padding: 3em 0;
 }
 /*----*/
 .store-right h6{

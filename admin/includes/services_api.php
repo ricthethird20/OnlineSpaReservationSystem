@@ -1,20 +1,22 @@
 <?php
-require_once('database.php');
+if(!class_exists('Database')) {
+    require_once('database.php');
+}
 $db = new Database();
 $db = $db->connect();
 
 //GET
 function getAllServices(){
 	$sql = 'SELECT * from pasithea_services order by service_name';
-	return query($sql);
+	return squery($sql);
 }
 
 function getServices($svc_id){
-	$sql = 'SELECT * from pasithea_services where id = $svc_id order by service_name';
-	return query($sql);
+	$sql = "SELECT * from pasithea_services where id like '$svc_id'";
+	return squery($sql);
 }
 
-function query($sql){
+function squery($sql){
 	
 	global $db;
 	$result = $db->query($sql);

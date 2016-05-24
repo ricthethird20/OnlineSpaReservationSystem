@@ -9,8 +9,6 @@ else
 ?>
 <html>
 <head>
-<html>
-<head>
 <title>Pasithea Massage Therapy Center</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <script src="js/jquery.min.js"></script>
@@ -98,8 +96,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 	<?php
-	session_start();
+	
 	include_once("includes/useraccount_api.php");
+	session_start();
 	?>
 	<!--header-->
 	<div class="header">
@@ -209,32 +208,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="clearfix"> </div>
 		</div>	
 	</div>
-	 <script type="text/javascript">
-						$(document).ready(function() {
-							/*
-							var defaults = {
-					  			containerID: 'toTop', // fading element id
-								containerHoverID: 'toTopHover', // fading element hover id
-								scrollSpeed: 1200,
-								easingType: 'linear' 
-					 		};
-							*/
-							
-								$().UItoTop({ easingType: 'easeOutQuart' });
-								$('#custom-first-day').calendar({
-									unavailable: ['2014-07-10','2016-05-11'],
-									onSelectDate: function(date, month, year)
-									{
-									  alert([year, month, date].join('-') + ' is: ' + this.isAvailable(date, month, year));
-									}
-								});
-							});
-						
-						
-						
-						
-					</script>
-				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
 </body>
 </html>
