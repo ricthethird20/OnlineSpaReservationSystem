@@ -36,15 +36,30 @@ $(function() {
 
 	});
 	
+	$(".p_book").on("click",function(){
+			var userId = $("#svc_userid").val();
+			if(userId != ''){
+				var svcId = $(this).closest(".p_book").attr("id");
+				window.location.href="index.php?pg=book&svcId="+svcId;
+			}else{
+				alert('Please login first.');
+				$('.cd-signin').trigger('click'); // Also Works
+			}
+	});
+	
 	$("#book-time").on("change", function() {
 			
 			var startTime = $(this).val().split(':');
 			var endHours = parseInt(startTime[0]) +1;
 			endHours = Math.min(Math.max(endHours, 1), 24);
-			$('#book-end').val(endHours +':'+ startTime[1]);
-			
+			$('#book-end').val(pad(endHours,2) +':'+ startTime[1]);	
 	});
-	
+		
+	function pad (str, max) {
+	  str = str.toString();
+	  return str.length < max ? pad("0" + str, max) : str;
+	}
+
 	function request(param, onSuccess, onError) {
 		$.ajax({
 			url: param.url,

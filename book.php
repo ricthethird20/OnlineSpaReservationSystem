@@ -1,6 +1,4 @@
-	<script src="js/jquery.min.js"></script>
-	<script src="js/book.js"></script>
-	<div class="container" style='font-family: ""Rokkitt",serif"'>
+		<div class="container" style='font-family: ""Rokkitt",serif"'>
 		<h2 align='center'>Booking form</h2>
 		<?php
 			require_once('admin/includes/services_api.php');
@@ -22,18 +20,18 @@
 										<td colspan='8' style='text-decoration: underline'><?php echo $rows->service_name;?></td>	
 									</tr>
 									<tr>
-										<td colspan='8'><h3>Schedule booking</h3></td>								
+										<td colspan='6'><h3>Schedule booking</h3></td>	
+										<td id='td-available' style='display:none;color:green'>Available</td>
+										<td id='td-unavailable' style='display:none;color:red'>Unavailable</td>							
 									</tr>
 									<tr>
 										<td>Date:</td>
 										<td><input type='date' id='book-date' name='book-date' required></td>
 										<td>Time:</td>
 										<td><input type='time' id='book-time' name='book-time' required></td>
-										<td>End time:</td>
+										<td colspan='2'>End time:</td>
 										<td><input type='time' id='book-end' name='book-end' readonly></td>
-										<td><input type='button' id='check-book' name='check-book' value='Check availabilty'></td>
-										<td id='td-available' style='display:none;color:green'>Available</td>
-										<td id='td-unavailable' style='display:none;color:red'>Unavailable</td>
+										<td><input type='button' id='check-book' name='check-book' value='Check availabilty'></td>										
 									</tr>
 									<tr>
 										
@@ -46,13 +44,13 @@
 									</tr>
 									<tr>
 										<td>
-											<input type="text" name="captcha_code" size="10" maxlength="6" />
+											<input type="text" id='captcha_code2' name="captcha_code" size="10" maxlength="6" />
 											<a href="#" onclick="document.getElementById('captcha').src = 'securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a>
 										<td>
 									</tr>
 									<tr>
 										<td>
-											<input type="submit" name="submit-book" value='Book now!'/>
+											<input type="submit" id='submit-book' name="submit-book" value='Book now!'/>
 										<td>
 									</tr>
 								</table>
@@ -60,15 +58,16 @@
 						</div>						  
 				</div>
 				<?php
+				
+					
 					include_once ('securimage/securimage.php');
 					include_once('includes/misc_api.php');
 					$securimage = new Securimage();
-					if(isset($_POST['submit-book'])){
+					
+					if(isset($_POST['submit-book'])){					
 						if ($securimage->check($_POST['captcha_code']) == false) {
-							alert('noooo!');
 							  echo "<span style='color:red;margin-left:10px;'>The security code entered was incorrect.</span><br />";
 							  echo "<span style='color:red;margin-left:10px;'>Please try again.</span>";
-							  
 						}else{
 							$userid = $_SESSION['userid'];
 							$book_date = $_POST['book-date'];

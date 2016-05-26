@@ -1,4 +1,3 @@
-<script src="js/jquery.min.js"></script>
 <?php
 if(!isset($_SESSION['userid']))
 	$user_id = '';
@@ -7,7 +6,7 @@ else
 ?>
 <div class="container">
 			<div class="specials">
-			<input type='hidden' value='<?php echo $user_id?>'/>
+			<input type='hidden' id='svc_userid' value='<?php echo $user_id?>'/>
 			<h2>Our Services</h2>
 				<?php
 					require_once('admin/includes/services_api.php');
@@ -21,7 +20,7 @@ else
 							<a href="#" ><img src="<?php echo 'admin/'.$rows->image_url;?>" class="img-responsive" alt="">							
 								</a>
 							<h5><a href="#"><?php echo $rows->service_name;?></a></h5>
-							<p onclick='check_credentials()'>Book now</p>
+							<p class='p_book' id='<?php echo $rows->id;?>'>Book now</p>
 						</div>
 						
 						
@@ -47,10 +46,3 @@ else
 				</div>
 			</div>
 		</div>
-<script>
-	$(document).ready(function(){
-		function check_credentials(){
-			alert('oa');
-		}
-	});
-</script>

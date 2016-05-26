@@ -35,7 +35,7 @@ else
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Account</a>
                         </li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
@@ -43,9 +43,7 @@ else
                         <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-user -->
                 </li>
-                <!-- /.dropdown -->
             </ul>
         </nav>
         <nav class="navbar-default navbar-side" role="navigation">
@@ -111,7 +109,11 @@ else
 						
 						case 'faq':
 						break;
-					}
+						
+						case 'bookings':
+							include_once('bookings.php');
+							break;
+					}	
 				?>
             </div>
 

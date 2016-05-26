@@ -16,5 +16,8 @@
 			$svc_id = $_GET['svcId'];
 			include_once('book.php');		
 			break;
+		case 'cbook':
+			include_once('client_bookings.php');
+			break;
 	}
 ?>

@@ -37,6 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</script>
 				
 <script src="js/responsiveslides.min.js"></script>
+<script src="js/book.js"></script>
 <style>
 .rslides {
   position: relative;
@@ -136,7 +137,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<span style="color: white;font-size: 16px;">Hello, </span>
 							<a href="#" class="dropbtn"><?php echo $client_name; ?></a>
 								<div class="dropdown-content">
-								  <a href="#">Bookings</a>
+								  <a href="index.php?pg=cbook">Bookings</a>
 								  <a href="#">Account settings</a>
 								  <a href="logout.php">Sign out</a>
 							</div>
@@ -177,8 +178,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--contents here-->
 	<?php
-		require_once('login_form.php');
-		require_once('contents.php');  
+		include('login_form.php');
+		include('contents.php');  
 	?>
 	<!---->
 	<div class="footer">
