@@ -53,7 +53,7 @@ else
                         <a href="index.php"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="index.php?page=bookings"><i class="fa fa-desktop"></i> Bookings</a>
+                        <a href="index.php?page=bookings"><i class="fa fa-desktop"></i> Booking</a>
                     </li>
 					<li>
                         <a href="index.php?page=msgs"><i class="fa fa-table"></i> Messages</a>
@@ -62,7 +62,7 @@ else
                         <a href="index.php?page=svcs"><i class="fa fa-bar-chart-o"></i> Services</a>
                     </li>
                     <li>
-                        <a href="index.php?page=clients"><i class="fa fa-qrcode"></i> Client Details</a>
+                        <a href="index.php?page=client"><i class="fa fa-qrcode"></i> Client Info &amp <br> Walk-in Bookings</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-sitemap"></i> Web Contents<span class="fa arrow"></span></a>
@@ -112,6 +112,10 @@ else
 						
 						case 'bookings':
 							include_once('bookings.php');
+							break;
+							
+						case 'client':
+							include_once('client.php');
 							break;
 					}	
 				?>

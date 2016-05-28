@@ -80,43 +80,7 @@ th {
 							
 						</table>
 							<br>
-					<div style='float:left'>
-					<h3>Add Booking</h3>
-					<br>
-					<table>
-						<form enctype="multipart/form-data" action="upload.php" method="POST">
-							<input type='hidden' id='hidden_id' name='hidden_id'/>
-							<tr>
-								<td>Date:</td>
-								<td>
-									<input type="date" name="dt-booking" />																		
-								</td>
-							</tr>
-							<tr>
-								<td>Start time:</td>
-								<td>
-									<input type="time" name="dt-starttime" />																		
-								</td>
-							</tr>
-							<tr>
-								<td>End time:</td>
-								<td>
-									<input type="time" name="dt-endtime" />																		
-								</td>
-							</tr>
-							<tr>
-								<td>Service name:</td>
-								<td>
-								
-								</td>
-							</tr>
-							<tr>
-								<td><input type="submit" name='submit' value="Confirm booking" /></td>
-								<td><input type="button" name='btnClear' id='btnClear' value="Clear fields" /></td>
-							</tr>
-						</form>
-					</table>
-					</div>
+					
 
 			</div>
 		</div> 

@@ -78,7 +78,7 @@
 							$status = 'Pending';
 							require_once('admin/includes/book_api.php');
 							saveBookings($svc_id,$userid,
-								$book_date,$book_start,$book_end,$status);
+								$book_date,$book_start,$book_end,$status,'online','','');
 							alert('You have successfully book a service for '.$rows->service_name.'.');
 						}
 					}

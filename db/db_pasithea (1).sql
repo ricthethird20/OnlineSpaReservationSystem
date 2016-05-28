@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2016 at 12:08 AM
--- Server version: 10.1.10-MariaDB
--- PHP Version: 5.6.19
+-- Generation Time: May 28, 2016 at 11:31 AM
+-- Server version: 10.1.9-MariaDB
+-- PHP Version: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -40,7 +40,10 @@ CREATE TABLE `pasithea_account` (
 
 INSERT INTO `pasithea_account` (`acct_id`, `userId`, `Lastname`, `FirstName`, `Mobile`) VALUES
 (3, 11, 'Ferrancullo III', 'Ricardo', '09269813431'),
-(4, 12, 'Ferrancullo', 'Marco Polo', '02384');
+(4, 12, 'Ferrancullo', 'Marco Polo', '02384'),
+(17, 0, 'Avocado', 'Trees', '092324324'),
+(21, 14, 'Rollon', 'Micoy', '345345'),
+(22, 0, 'Amul', 'Marrian Angelica', '092698123123');
 
 -- --------------------------------------------------------
 
@@ -55,17 +58,25 @@ CREATE TABLE `pasithea_bookings` (
   `book_date` varchar(111) NOT NULL,
   `book_starttime` int(11) NOT NULL,
   `book_endtime` int(11) NOT NULL,
-  `status` varchar(20) NOT NULL
+  `status` varchar(20) NOT NULL,
+  `client_type` varchar(50) NOT NULL,
+  `walkin_lname` varchar(50) NOT NULL,
+  `walkin_fname` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pasithea_bookings`
 --
 
-INSERT INTO `pasithea_bookings` (`bookId`, `svc_id`, `user_id`, `book_date`, `book_starttime`, `book_endtime`, `status`) VALUES
-(1, 21, 12, '2016-05-23', 12, 13, '2'),
-(2, 23, 11, '2016-05-23', 12, 13, 'Pending'),
-(3, 23, 11, '2016-05-24', 916, 1016, 'Pending');
+INSERT INTO `pasithea_bookings` (`bookId`, `svc_id`, `user_id`, `book_date`, `book_starttime`, `book_endtime`, `status`, `client_type`, `walkin_lname`, `walkin_fname`) VALUES
+(1, 21, 12, '2016-05-23', 12, 13, 'Confirmed', '', '', ''),
+(2, 23, 11, '2016-05-23', 12, 13, 'Expired', '', '', ''),
+(3, 23, 11, '2016-05-24', 916, 1016, 'Pending', '', '', ''),
+(4, 23, 11, '2016-05-26', 2202, 2302, 'Cancelled', '', '', ''),
+(5, 21, 11, '2016-05-26', 0, 100, 'Pending', '', '', ''),
+(6, 16, 11, '2016-05-28', 1259, 1359, 'Pending', '', '', ''),
+(7, 15, 13, '2016-05-29', 1400, 1500, 'Pending', '', '', ''),
+(8, 14, 11, '2016-05-29', 1504, 1604, 'Pending', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -115,7 +126,9 @@ CREATE TABLE `pasithea_users` (
 
 INSERT INTO `pasithea_users` (`userId`, `userName`, `passWord`) VALUES
 (11, 'ric', 'e11932155cb6841f4158185db2ce6926'),
-(12, 'marco', '81dc9bdb52d04dc20036dbd8313ed055');
+(12, 'marco', '81dc9bdb52d04dc20036dbd8313ed055'),
+(13, 'marrian', '3fa5f9ddcb0f4f26bd1e3fdeb66acb26'),
+(14, 'micoy', '60fbd5e66c32996df0d93e6149835366');
 
 --
 -- Indexes for dumped tables
@@ -153,22 +166,22 @@ ALTER TABLE `pasithea_users`
 -- AUTO_INCREMENT for table `pasithea_account`
 --
 ALTER TABLE `pasithea_account`
-  MODIFY `acct_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `acct_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `pasithea_bookings`
 --
 ALTER TABLE `pasithea_bookings`
-  MODIFY `bookId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `bookId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `pasithea_services`
 --
 ALTER TABLE `pasithea_services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `pasithea_users`
 --
 ALTER TABLE `pasithea_users`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
