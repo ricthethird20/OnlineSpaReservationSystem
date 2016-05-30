@@ -70,13 +70,15 @@ $(function() {
 			$('#dt-endtime').val(pad(endHours,2) +':'+ startTime[1]);	
 			var st = $(this).val().replace(':','');
 			var ed = $('#dt-endtime').val().replace(':','');
-			checkAvailableBooking(st,ed);
-			
+			var dt = $('#dt-booking').val();
+			if(dt != "")
+				checkAvailableBooking(dt,st,ed);
+
 	});
 	
-	function checkAvailableBooking(startTime,endTime){
+	function checkAvailableBooking(dt,startTime,endTime){
 		request({
-				url: "checkAvailability.php",
+				url: "includes/checkAvailableBooking.php",
 				data: {
 					dt: dt,
 					startTime: startTime,
@@ -85,9 +87,9 @@ $(function() {
 			},
 			function(result) {
 				if (result.status == "ok") {
-					
+					$('#submit-booking').show(100);
 				} else {
-
+					$('#submit-booking').hide(100);
 				}
 			},
 			function() {

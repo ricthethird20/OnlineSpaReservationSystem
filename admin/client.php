@@ -169,7 +169,7 @@ th {
 								</td>
 							</tr>
 							<tr>
-								<td><input type="submit" name='submit-booking' value="Confirm booking" /></td>
+								<td><input type="submit" id='submit-booking' name='submit-booking' value="Confirm booking" style='display:none'/></td>
 								<td><input type="button" name='btnClear' id='btnClear' value="Clear fields" /></td>
 							</tr>
 						</form>
@@ -177,12 +177,18 @@ th {
 					<?php
 						if(isset($_POST['submit-booking'])){
 							require_once('includes/book_api.php');
+							$clientId = $_POST['book-id'];
 							$lname = $_POST['book-lname'];
 							$fname = $_POST['book-fname'];
 							$dt = $_POST['dt-booking'];
 							$starttime = $_POST['dt-starttime'];
-							$_POST['dt-endtime'];
-							$_POST['book-servicename'];							
+							$endtime = $_POST['dt-endtime'];
+							$serviceID = $_POST['book-servicename'];		
+							$starttime = str_replace(':','',$starttime);
+							$endtime = str_replace(':','',$endtime);
+							saveBookings($serviceID,$clientId,
+								$dt,$starttime,$endtime,'Confirmed','Walkin',$lname,$fname);
+													
 						}
 					?>
 					</div>
