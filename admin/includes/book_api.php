@@ -9,8 +9,8 @@ function saveBookings($svc_id,$user_id,
 			$book_date,$book_starttime,$book_endtime,$status,$client_type,$lname,$fname){
 	global $db;
 	$sql = "INSERT into pasithea_bookings(svc_id,user_id,
-	book_date,book_starttime,book_endtime,status)
-	values($svc_id,$user_id,'$book_date',$book_starttime,$book_endtime,'$status')";
+	book_date,book_starttime,book_endtime,status,client_type,walkin_lname,walkin_fname)
+	values($svc_id,$user_id,'$book_date',$book_starttime,$book_endtime,'$status','$client_type','$lname','$fname')";
 	$db->query($sql) or die(mysqli_error($db));
 }
 
@@ -24,10 +24,18 @@ function getBookings(){
 	$q = "SELECT b.*,s.service_name,a.Lastname,a.FirstName 
 	FROM pasithea_bookings b
 	INNER JOIN pasithea_services s ON b.svc_id = s.id
-	INNER JOIN pasithea_account a ON b.user_id = a.userId
+	INNER JOIN pasithea_account a ON b.user_id = a.acct_id
 	ORDER BY b.book_date DESC";
 	return s2_query($q);
 }
+
+function updateBooking($bookId,$status){
+	global $db;
+	$sql = "UPDATE pasithea_bookings SET status = '$status' WHERE bookId = $bookId";
+	$db->query($sql) or die(mysqli_error($db));
+}
+
+
 
 function parseTime($tym){
 	for($i = 1;$i < 5;$i++){

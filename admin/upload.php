@@ -53,11 +53,12 @@ function saveServiceFunc(){
 	// Check if $uploadOk is set to 0 by an error
 	if ($uploadOk != 0) {
 		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-			alert("New service added. ");
+			//alert("New service added. ");
 		} else {
-			
 			alert("Sorry, there was an error uploading your file.");
 		}
 	}
+	echo "<script>document.getElementById('save_prods').click();</script>";
+	
 }
 ?> 

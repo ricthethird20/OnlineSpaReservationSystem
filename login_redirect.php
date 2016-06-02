@@ -10,9 +10,16 @@ if(!isUserExist($username,$password)){
 	alert('No user found');
 }else{
 	$result = isUserExist($username,$password);
-	foreach($result as $rows){
+	foreach($result as $rows){		
 		$_SESSION['userid'] = $rows->userId;
 	}
+	$acct = getUserDetails($_SESSION['userid']);
+	if($acct){
+		foreach($acct as $acctId){
+			$_SESSION['acctId'] = $acctId->acct_id;
+		}
+	}
+	
 	header("Location: index.php");
 }
 

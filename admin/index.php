@@ -64,6 +64,9 @@ else
                     <li>
                         <a href="index.php?page=client"><i class="fa fa-qrcode"></i> Client Info &amp <br> Walk-in Bookings</a>
                     </li>
+					<li>
+                        <a href="index.php?page=products"><i class="fa fa-qrcode"></i> Products</a>
+                    </li>
                     <li>
                         <a href="#"><i class="fa fa-sitemap"></i> Web Contents<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level" >
@@ -116,6 +119,9 @@ else
 							
 						case 'client':
 							include_once('client.php');
+							break;
+						case 'products':
+							include_once('products.php');
 							break;
 					}	
 				?>

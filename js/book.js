@@ -1,4 +1,23 @@
 $(function() {
+	$("#cancel-booking").on("click",function(){
+		var q = confirm("Do you really want to cancel this booking?");
+		if(q){	
+			selectedRow = $(this).parent().parent();
+			var id = $(selectedRow).attr("id");
+				request({
+					url: "includes/cancel_booking.php",
+					data: {
+						bookId: id
+					}
+				},
+				function(result) {
+					location.href = 'index.php?pg=cbook';
+				},
+				function() {
+					
+				});
+		}
+	});
 	
 	$("#check-book").on("click",function(){
 		var dt = $("#book-date").val();
@@ -35,6 +54,8 @@ $(function() {
 		}
 
 	});
+	
+	
 	
 	$(".p_book").on("click",function(){
 			var userId = $("#svc_userid").val();

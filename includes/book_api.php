@@ -22,11 +22,17 @@ function getBookingsFor($id){
 	return s_query($q);
 }
 
+function cancelBooking($bookId){
+	global $db;
+	$sql = "UPDATE pasithea_bookings SET status = 'Cancelled' WHERE bookId = $bookId";
+	$db->query($sql) or die(mysqli_error($db));
+}
+
 function getBookings(){
 	$q = "SELECT b.*,s.service_name,a.Lastname,a.FirstName 
 	FROM pasithea_bookings b
 	INNER JOIN pasithea_services s ON b.svc_id = s.id
-	INNER JOIN pasithea_account a ON s.user_id = a.userId
+	INNER JOIN pasithea_account a ON s.user_id = a.acct_id
 	ORDER BY b.book_date DESC";
 	return s_query($q);
 }

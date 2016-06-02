@@ -1,5 +1,35 @@
 $(function() {
 	
+	$(document).on("click", "#save_prods", function() {
+		alert('delayed');
+		var i = 0;
+		var values = '';
+		var svcName = $('#serviceName').val();
+		
+		$("#product_table tr :input").each(function () {
+			i++;
+			values = values + this.value +'-';
+			if(i == 2){
+				var prodId = values.split('-')[0];
+				var qty = values.split('-')[1];
+					request({
+					url: "includes/save_productservice.php",
+						data: {
+							svcName: svcName,
+							prodId: prodId,
+							qty: qty
+						}
+					},
+					function(result) {
+						if (result.status == "success") {} else {}
+					},
+					function() {});
+				i = 0;
+				values = '';
+			}							
+		}) 
+	});
+	
 	$(document).on("click", "#edit-service", function() {
 			selectedRow = $(this).parent().parent();
 			var id = $(selectedRow).attr("id");
@@ -26,6 +56,10 @@ $(function() {
 			$('#serviceCost').val('');
 			$('#serviceDisc').val('');
 			$('input:radio[name=radButton]')[0].checked = true;
+	});
+	
+	$("#btnConfirm").on("click",function(){
+		alert('hi');
 	});
 
 	
