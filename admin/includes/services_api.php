@@ -22,19 +22,25 @@ function getSvcIdByName($svcName){
 }
 
 function saveProductsToService($svcName,$prodId,$qty){
-	$res = getSvcIdByName($svcName);
-	if($res){
-		$svcId = 0;
-		foreach($res as $row){
-			$svcId = $row->id;
+		$res = getMaxSvcId();
+		$id = 0;
+		if($res){
+			foreach($res as $row){
+				$id = intval($row->max_id);
+			}
+		}else{
+			$id=1;
 		}
 		global $db;
 		$sql = "INSERT into pasithea_service_products(svcId,prodId,qty)
-		values($svcId,$prodId,$qty)";
+		values($id,$prodId,$qty)";
 		$db->query($sql) or die(mysqli_error($db));
-	}else{
-		echo "<script>alert('noo');</script>";
-	}
+}
+
+function getMaxSvcId(){
+
+	$q = "SELECT MAX(id) as max_id FROM pasithea_services";
+	return squery($q);
 }
 
 function deleteProductsService($svcName){

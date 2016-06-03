@@ -20,6 +20,11 @@ function saveServiceFunc(){
 
 	$target_dir = "assets/img/";
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	if($target_dir == $target_file){
+		$target_file = $target_dir ."noImage.png";
+		
+	}
+		
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	// Check if image file is a actual image or fake image
@@ -40,25 +45,21 @@ function saveServiceFunc(){
 		$uploadOk = 0;
 	}*/
 	// Check file size
-	if ($_FILES["fileToUpload"]["size"] > 500000) {
+	if ($_FILES["fileToUpload"]["size"] > 500000 && $uploadOk == 1) {
 		alert("Sorry, your file is too large. File was not uploaded.");
 		$uploadOk = 0;
 	}
 	// Allow certain file formats
 	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-	&& $imageFileType != "gif" ) {
+	&& $imageFileType != "gif" && $uploadOk == 1) {
 		alert("Sorry, only JPG, JPEG, PNG & GIF files are allowed. File was not uploaded.");
 		$uploadOk = 0;
 	}
 	// Check if $uploadOk is set to 0 by an error
 	if ($uploadOk != 0) {
 		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-			//alert("New service added. ");
-		} else {
-			alert("Sorry, there was an error uploading your file.");
+			alert("New service added/modified. ");
 		}
 	}
-	echo "<script>document.getElementById('save_prods').click();</script>";
-	
 }
 ?> 

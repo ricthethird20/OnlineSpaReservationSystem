@@ -1,7 +1,7 @@
 $(function() {
 	
-	$(document).on("click", "#save_prods", function() {
-		alert('delayed');
+	$(document).on("click", "#submit-changes", function() {
+		alert('clicked!');
 		var i = 0;
 		var values = '';
 		var svcName = $('#serviceName').val();
@@ -30,6 +30,7 @@ $(function() {
 		}) 
 	});
 	
+	
 	$(document).on("click", "#edit-service", function() {
 			selectedRow = $(this).parent().parent();
 			var id = $(selectedRow).attr("id");
@@ -47,7 +48,18 @@ $(function() {
 				$('input:radio[name=radButton]')[0].checked = true;
 			else
 				$('input:radio[name=radButton]')[1].checked = true;
+			scrollToElement('#service-form');
 	});
+	
+	function scrollToElement(selector, callback){
+    var animation = {scrollTop: $(selector).offset().top};
+    $('html,body').animate(animation, 'slow', 'swing', function() {
+        if (typeof callback == 'function') {
+            callback();
+        }
+        callback = null;
+    });
+}
 	
 	$(document).on("click", "#btnClear", function() {
 			$('#hidden_id').val('');
@@ -57,11 +69,6 @@ $(function() {
 			$('#serviceDisc').val('');
 			$('input:radio[name=radButton]')[0].checked = true;
 	});
-	
-	$("#btnConfirm").on("click",function(){
-		alert('hi');
-	});
-
 	
 	$(document).on("click", "#delete-service", function() {
 		var q = confirm("Do you really want to delete this service?");

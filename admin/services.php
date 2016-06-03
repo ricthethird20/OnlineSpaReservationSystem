@@ -55,11 +55,12 @@ th {
 							?>
 						</table>
 							<br>
-					<div style='float:left'>
+					<div style='float:left' id="service-form">
 					<h3>Add Services</h3>
 					<br>
+					<form enctype="multipart/form-data" action="upload.php" method="POST">
 					<table>
-						<form enctype="multipart/form-data" action="upload.php" method="POST">
+						
 							<input type='hidden' id='hidden_id' name='hidden_id'/>
 							<tr>
 								<td>Image:</td>
@@ -89,11 +90,12 @@ th {
 								<td><input type='number' id='serviceDisc' name='serviceDisc' required></td>
 							</tr>
 							<tr>
-								<td><input type="submit" id='submit-changes' name='submit' value="Save changes" /></td>
-								<td><input type="button" name='btnClear' id='btnClear' value="Clear fields" /></td>
+								
+								<td colspan='2'><input type="button" name='btnClear' id='btnClear' value="Clear fields" /></td>
 							</tr>
-						</form>
+						
 					</table>
+					
 					<h3>Add Products</h3>
 					<br>
 					<table id='product_table'>
@@ -118,10 +120,12 @@ th {
 							<td><input type='number' id='prod_qty' name='prod_qty' value='1' required/></td>
 						</tr>					
 					</table><br>
-					<button style='float:left' id='save_prods'>Save Products</button>
+					
+					<input type="submit" id='submit-changes' name='submit' value="Save changes" />
+					
+					</form>
 					<button style='float:right' id='add_prod' onclick='addRow()'>Add</button>
 					</div>
-					
 					<script>
 						function addRow(){
 							var lastRow = $("#product_table tr:last");
