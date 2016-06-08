@@ -69,7 +69,7 @@
 							  echo "<span style='color:red;margin-left:10px;'>The security code entered was incorrect.</span><br />";
 							  echo "<span style='color:red;margin-left:10px;'>Please try again.</span>";
 						}else{
-							$userid = $_SESSION['userid'];
+							$userid = $_SESSION['acctId'];
 							$book_date = $_POST['book-date'];
 							$book_start = $_POST['book-time'];
 							$book_end = $_POST['book-end'];

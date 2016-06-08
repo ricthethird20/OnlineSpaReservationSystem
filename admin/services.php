@@ -89,12 +89,51 @@ th {
 								<td><input type='number' id='serviceDisc' name='serviceDisc' required></td>
 							</tr>
 							<tr>
-								<td><input type="submit" name='submit' value="Save changes" /></td>
+								<td><input type="submit" id='submit-changes' name='submit' value="Save changes" /></td>
 								<td><input type="button" name='btnClear' id='btnClear' value="Clear fields" /></td>
 							</tr>
 						</form>
 					</table>
+					<h3>Add Products</h3>
+					<br>
+					<table id='product_table'>
+						<tr id='row' data-row="0" class='row'>
+							<td>Product:</td>
+							<td>
+								<select name='prod_select' id='prod_select'>
+								<?php
+								include_once('includes/product_api.php');
+								$r = getProducts();
+								if($r){
+									foreach($r as $row){
+										?>
+										<option value='<?php echo $row->prodId;?>'><?php echo $row->ProductName;?></option>
+										<?php
+									}
+								}
+								?>
+								</select>
+							</td>
+							<td>Quantity:</td>
+							<td><input type='number' id='prod_qty' name='prod_qty' value='1' required/></td>
+						</tr>					
+					</table><br>
+					<button style='float:left' id='save_prods'>Save Products</button>
+					<button style='float:right' id='add_prod' onclick='addRow()'>Add</button>
 					</div>
+					
+					<script>
+						function addRow(){
+							var lastRow = $("#product_table tr:last");
+							var newRow = lastRow.clone();
+							var newId = parseInt(lastRow.data('row'))+1;
+							newRow.data('row', newId);
+							newRow.prop('id', newId);
+							newRow.find('select').prop('selectedIndex', 0);
+							lastRow.after(newRow);
+						}
+												
+					</script>
 
 			</div>
 		</div> 

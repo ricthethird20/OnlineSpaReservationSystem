@@ -5,7 +5,7 @@
 				right: 20px;font-size: 3em;font-family: 'Lobster Two', cursive;color: #aa381e;">
 								Essential Balance.<br>
 								Massage and Wellness
-								<a href="#" class="done">Book Now!</a>
+								<a href="index.php?pg=svc" class="done">Book Now!</a>
 			</div>				
 			<img src="images/banner1.png" alt="">
 		</li>
@@ -14,7 +14,7 @@
 				right: 20px;font-size: 3em;font-family: 'Lobster Two', cursive;color: #FCFCFC;">
 				Refresh. Relax.<br>
 				Wellness awaits you...
-				<a href="#" class="done">Book Now!</a>
+				<a href="index.php?pg=svc" class="done">Book Now!</a>
 			</div>
 			<img src="images/banner2.jpg" alt="">
 		</li>

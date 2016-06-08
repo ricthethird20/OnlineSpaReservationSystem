@@ -19,10 +19,19 @@
 			color: white;
 		}
 	</style>
+	<script src="js/book.js"></script>
+	<?php 
+	require_once('includes/book_api.php');
+	?>
 	<div class="container" style='font-family: ""Rokkitt",serif"'>
 		<br>
 		<h2 align='center'>Your Bookings</h2>
 		<div class="single">
+			<?php
+				$res = getBookingsFor($_SESSION['acctId']);
+				if($res){
+
+			?>
 			<div class="col-md-9  single-top" style='width:100%'>
 				<div class="text-in">					
 						<div class="single-men">							
@@ -65,13 +74,11 @@
 										<th>Status</th>
 										<th>Actions</th>
 									</tr>
-									<?php
-									
-									require_once('includes/book_api.php');
-									$res = getBookingsFor($_SESSION['userid']);
+									<?php									
+									$res = getBookingsFor($_SESSION['acctId']);
 									foreach($res as $rows){									
 									?>
-										<tr>
+										<tr id='<?php echo $rows->bookId;?>'>
 											<td><?php echo $rows->service_name;?></td>
 											<td><?php echo $rows->book_date;?></td>
 											<td><?php echo date('h:i A', strtotime(parseTime($rows->book_starttime)));?></td>
@@ -82,7 +89,7 @@
 												if($rows->status == 'Cancelled' || $rows->status == 'Expired')
 												echo 'No action required';
 												else{?>
-												<button id='cancel-booking'>Cancel</button>
+												<input type='button' id='cancel-booking' value='Cancel'/>
 												<button id='resched-booking'>Reschedule</button>
 												<?php													
 												}
@@ -98,7 +105,14 @@
 				</div>
 				
 			</div>		
-			<div class="clearfix"> </div>			
+			<div class="clearfix"> </div>
+			<?php
+				}else{
+			?>
+			<center><label>You don't have bookings yet.</label></center>
+			<?php
+				}
+			?>
 		</div>
 		
 	</div>

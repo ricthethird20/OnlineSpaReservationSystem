@@ -16,10 +16,44 @@ function getServices($svc_id){
 	return squery($sql);
 }
 
+function getSvcIdByName($svcName){
+	$sql = "SELECT id from pasithea_services where service_name = '$svcName'";
+	return squery($sql);
+}
+
+function saveProductsToService($svcName,$prodId,$qty){
+	$res = getSvcIdByName($svcName);
+	if($res){
+		$svcId = 0;
+		foreach($res as $row){
+			$svcId = $row->id;
+		}
+		global $db;
+		$sql = "INSERT into pasithea_service_products(svcId,prodId,qty)
+		values($svcId,$prodId,$qty)";
+		$db->query($sql) or die(mysqli_error($db));
+	}else{
+		echo "<script>alert('noo');</script>";
+	}
+}
+
+function deleteProductsService($svcName){
+	$res = getSvcIdByName($svcName);
+	if($res){
+		$svcId = 0;
+		foreach($res as $row){
+			$svcId = $row->id;
+		}
+		global $db;
+		$sql = "DELETE FROM pasithea_service_products WHERE svcId = $svcId";
+		$db->query($sql) or die(mysqli_error($db));	
+	}
+}
+
 function squery($sql){
 	
 	global $db;
-	$result = $db->query($sql);
+	$result = $db->query($sql) or die(mysqli_error($db));
 	if ( !$result || $result->num_rows == 0 ) {
 		return false;
 	}	

@@ -19,7 +19,7 @@ th {
     color: white;
 }
 </style>
-<script src="js/service.js"></script>
+<script src="js/book.js"></script>
 	<div id="page-inner">
 		
 		<div class="row">
@@ -52,12 +52,12 @@ th {
 								foreach($res as $rows){
 
 							?>
-								<tr>
+								<tr id = '<?php echo $rows->bookId;?>'>
 									<td><?php echo $rows->book_date;?></td>
 									<td><?php echo date('h:i A', strtotime(parseTime($rows->book_starttime)));?></td>
 									<td><?php echo date('h:i A', strtotime(parseTime($rows->book_endtime)));?></td>
 									<td><?php echo $rows->service_name;?></td>
-									<td><?php echo $rows->Lastname;?></td>
+									<td><?php echo $rows->FirstName." ".$rows->Lastname;?></td>
 									<td><?php echo $rows->status;?></td>
 									<td>
 										<?php
@@ -67,8 +67,8 @@ th {
 												echo "<button class='btnCancel'>Cancel</button>";
 											}
 											else{												
-												echo "<button class='btnConfirm'>Confirm</button>";
-												echo "<button class='btnCancel'>Cancel</button>";
+												echo "<input type='button' id='btnConfirm' value='Confirm'/>";
+												echo "<input type='button' id='btnCancel' value='Cancel'/>";
 											}
 										?>
 									</td>
