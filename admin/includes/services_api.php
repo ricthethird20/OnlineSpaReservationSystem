@@ -22,6 +22,7 @@ function getSvcIdByName($svcName){
 }
 
 function saveProductsToService($svcName,$prodId,$qty){
+<<<<<<< HEAD
 	$res = getSvcIdByName($svcName);
 	if($res){
 		$svcId = 0;
@@ -35,6 +36,27 @@ function saveProductsToService($svcName,$prodId,$qty){
 	}else{
 		echo "<script>alert('noo');</script>";
 	}
+=======
+		$res = getMaxSvcId();
+		$id = 0;
+		if($res){
+			foreach($res as $row){
+				$id = intval($row->max_id);
+			}
+		}else{
+			$id=1;
+		}
+		global $db;
+		$sql = "INSERT into pasithea_service_products(svcId,prodId,qty)
+		values($id,$prodId,$qty)";
+		$db->query($sql) or die(mysqli_error($db));
+}
+
+function getMaxSvcId(){
+
+	$q = "SELECT MAX(id) as max_id FROM pasithea_services";
+	return squery($q);
+>>>>>>> 9f4e26564ba13cae46c8080856a96b7d9725d7f4
 }
 
 function deleteProductsService($svcName){
